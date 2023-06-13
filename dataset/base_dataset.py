@@ -130,21 +130,21 @@ class BaseDataset(data.Dataset):
         if self.mode == 'train':
             h_off = np.random.randint(0, margin_h + 1)
             w_off = np.random.randint(0, margin_w + 1)
-            if self.fg_remain_ratio > 0:
-                raw_pos_num = np.sum(label == target_cls)
-                label_temp = label[h_off : h_off+crop_h, w_off : w_off+crop_w]
-                pos_num = np.sum(label_temp == target_cls)
-                crop_cnt = 0
-                while (pos_num < self.fg_remain_ratio * raw_pos_num and crop_cnt <= 30):
-                    h_off = np.random.randint(0, margin_h + 1)
-                    w_off = np.random.randint(0, margin_w + 1)
-                    label_temp = label[h_off : h_off+crop_h, w_off : w_off+crop_w]
-                    pos_num = np.sum(label_temp == 1)
-                    crop_cnt += 1
-                if pos_num < self.fg_remain_ratio * raw_pos_num:
-                    image = cv2.resize(image, (crop_w, crop_h), interpolation=cv2.INTER_LINEAR)
-                    label = cv2.resize(label, (crop_w, crop_h), interpolation=cv2.INTER_NEAREST)            
-                    return image, label
+            # if self.fg_remain_ratio > 0:
+            #     raw_pos_num = np.sum(label == target_cls)
+            #     label_temp = label[h_off : h_off+crop_h, w_off : w_off+crop_w]
+            #     pos_num = np.sum(label_temp == target_cls)
+            #     crop_cnt = 0
+            #     while (pos_num < self.fg_remain_ratio * raw_pos_num and crop_cnt <= 30):
+            #         h_off = np.random.randint(0, margin_h + 1)
+            #         w_off = np.random.randint(0, margin_w + 1)
+            #         label_temp = label[h_off : h_off+crop_h, w_off : w_off+crop_w]
+            #         pos_num = np.sum(label_temp == 1)
+            #         crop_cnt += 1
+            #     if pos_num < self.fg_remain_ratio * raw_pos_num:
+            #         image = cv2.resize(image, (crop_w, crop_h), interpolation=cv2.INTER_LINEAR)
+            #         label = cv2.resize(label, (crop_w, crop_h), interpolation=cv2.INTER_NEAREST)            
+            #         return image, label
         else:
             h_off = int(round(margin_h / 2.))
             w_off = int(round(margin_w / 2.))
