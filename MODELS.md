@@ -29,4 +29,22 @@ For each few-shot setting, we release three models trained with different random
 | Average  |    75.15     |    60.06   |     71.56    |
 
 ## Performance on COCO-20i
-We have relased models trained on base classes. The finetuned models will be uploaded soon.
+The released models on COCO are finetuned on few-shot data with batch size 1 and fp16 training.
+
+|     1-shot     |  Base |  Novel  |     Total    |
+| :-------------: | :---------: | :--------: | :--------: |
+| Seed-123 |    54.31     |    24.61   |     46.97    |
+| Seed-234 |    54.18     |    23.16   |     46.52    |
+| Average  |    54.24     |    23.89   |     46.75    |
+
+|     5-shot     |  Base |  Novel  |     Total    |
+| :-------------: | :---------: | :--------: | :--------: |
+| Seed-123 |    54.59     |    36.81   |     50.20    |
+| Seed-234 |    54.58     |    36.72   |     50.17    |
+| Average  |    54.59     |    36.77   |     50.19    |
+
+|     10-shot     |  Base |  Novel  |     Total    |
+| :-------------: | :---------: | :--------: | :--------: |
+| Seed-123 |    54.66     |    39.06   |     50.81    |
+| Seed-234 |    54.57     |    38.76   |     50.67    |
+| Average  |    54.62     |    38.91   |     50.74    |
