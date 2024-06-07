@@ -24,7 +24,7 @@ Please refer to [PFENet](https://github.com/dvlab-research/PFENet) to get PASCAL
 After the first stage training, the code will save the filenames for each class as txt files in `dataset/list/`. Then, you can use `utils/gen_fs_list.py` to select few-shot data for the second stage training with different random seeds.
 
 ## Pretrained Models
-Download ImageNet pretrained ResNet-50 from PFENet [here](https://mycuhk-my.sharepoint.com/personal/1155122171_link_cuhk_edu_hk/_layouts/15/onedrive.aspx?id=%2Fpersonal%2F1155122171%5Flink%5Fcuhk%5Fedu%5Fhk%2FDocuments%2FPFENet%20TPAMI%20Submission%2FPFENet%5Fcheckpoints%2Fbackbone%2Ezip&parent=%2Fpersonal%2F1155122171%5Flink%5Fcuhk%5Fedu%5Fhk%2FDocuments%2FPFENet%20TPAMI%20Submission%2FPFENet%5Fcheckpoints&ga=1). Check [models](./MODELS.md) to get pretrained POP models.
+Download ImageNet pretrained ResNet-50 [here](https://drive.google.com/file/d/1w5pRmLJXvmQQA5PtCbHhZc_uC4o0YbmA/view). Check [models](./MODELS.md) to get pretrained POP models.
 
 ## Usage
 ### Training
